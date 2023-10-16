@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Flow\ETL\Tests\Unit\Adapter\Logger\Logger;
+namespace Flow\ETL\Adapter\Logger\Tests\Unit\Logger;
 
 use Flow\ETL\Adapter\Logger\Logger\DumpLogger;
 use PHPUnit\Framework\TestCase;

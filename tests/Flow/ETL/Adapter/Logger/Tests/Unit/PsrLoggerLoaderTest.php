@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Flow\ETL\Tests\Unit\Adapter\Logger;
+namespace Flow\ETL\Adapter\Logger\Tests\Unit;
 
 use Flow\ETL\Adapter\Logger\PsrLoggerLoader;
 use Flow\ETL\Config;
