@@ -6,12 +6,11 @@ namespace Flow\ETL\Adapter\Logger\Tests\Unit;
 
 use function Flow\ETL\DSL\{int_entry, string_entry};
 use Flow\ETL\Adapter\Logger\PsrLoggerLoader;
-use Flow\ETL\{Config, FlowContext, Row, Rows};
-use PHPUnit\Framework\TestCase;
+use Flow\ETL\{Config, FlowContext, Row, Rows, Tests\FlowTestCase};
 use Psr\Log\LogLevel;
 use Psr\Log\Test\TestLogger;
 
-final class PsrLoggerLoaderTest extends TestCase
+final class PsrLoggerLoaderTest extends FlowTestCase
 {
     public function test_psr_logger_loader() : void
     {

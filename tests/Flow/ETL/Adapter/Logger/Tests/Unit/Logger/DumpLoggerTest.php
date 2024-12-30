@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Flow\ETL\Adapter\Logger\Tests\Unit\Logger;
 
 use Flow\ETL\Adapter\Logger\Logger\DumpLogger;
-use PHPUnit\Framework\TestCase;
+use Flow\ETL\Tests\FlowTestCase;
 
-final class DumpLoggerTest extends TestCase
+final class DumpLoggerTest extends FlowTestCase
 {
     public function test_logger() : void
     {
