@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Flow\ETL\Adapter\Logger\Logger;
+namespace Flow\ETL\Adapter\Logger\IO\Loader;
 
 use Psr\Log\AbstractLogger;
 use Symfony\Component\VarDumper\VarDumper;

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Flow\ETL\Adapter\Logger\Tests\Unit;
+namespace Flow\ETL\Adapter\Logger\Tests\Unit\IO\Loader;
 
-use Flow\ETL\Adapter\Logger\PsrLoggerLoader;
+use Flow\ETL\Adapter\Logger\IO\Loader\PsrLoggerLoader;
 use Flow\ETL\Tests\FlowTestCase;
 use Flow\Types\Value\Json;
 use Psr\Log\LogLevel;
@@ -28,7 +28,7 @@ final class PsrLoggerLoaderTest extends FlowTestCase
 
         $loader->load(
             array_to_rows([['id' => 12345, 'name' => 'Norbert']], schema(int_schema('id'), string_schema('name'))),
-            flow_context(config()),
+            flow_context(config())->backend(),
         );
 
         static::assertTrue($logger->hasErrorRecords());
@@ -41,7 +41,7 @@ final class PsrLoggerLoaderTest extends FlowTestCase
 
         (new PsrLoggerLoader($logger, 'row log'))->load(array_to_rows([['payload' => Json::fromArray([
             'a' => 1,
-        ])]], schema(json_schema('payload'))), flow_context(config()));
+        ])]], schema(json_schema('payload'))), flow_context(config())->backend());
 
         static::assertSame(['payload' => ['a' => 1]], $logger->records[0]['context']);
     }

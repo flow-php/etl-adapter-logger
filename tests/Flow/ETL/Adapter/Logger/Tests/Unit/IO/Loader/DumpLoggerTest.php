@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Flow\ETL\Adapter\Logger\Tests\Unit\Logger;
+namespace Flow\ETL\Adapter\Logger\Tests\Unit\IO\Loader;
 
-use Flow\ETL\Adapter\Logger\Logger\DumpLogger;
+use Flow\ETL\Adapter\Logger\IO\Loader\DumpLogger;
 use Flow\ETL\Tests\FlowTestCase;
 
 use function class_exists;
